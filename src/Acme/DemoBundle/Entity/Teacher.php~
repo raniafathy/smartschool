@@ -1,0 +1,102 @@
+<?php 
+
+namespace Acme\DemoBundle\Entity;
+use Symfony\Component\Validator\Constraints as Assert;
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * @ORM\Entity
+ * @ORM\Table(name="teacher")
+ */
+
+class Teacher
+{
+
+//defination of variables 
+/************************/
+   /**
+    * @ORM\Column(type="integer", length=40)
+    * @ORM\Id
+    * @ORM\GeneratedValue(strategy="AUTO")
+   */
+    protected $id;
+
+   /**
+    * @Assert\NotBlank
+    * @ORM\Column(type="string", length=40)
+   */
+   protected $code;
+
+   /**
+    * @Assert\NotBlank
+    * @ORM\Column(type="string", length=200)
+   */
+   protected $fullname;
+
+   /**
+    * @Assert\NotBlank
+    * @ORM\Column(type="string", length=200)
+   */
+   protected $job;
+
+   /**
+    * @Assert\NotBlank
+    * @ORM\Column(type="string", length=200)
+   */
+   protected $graduate;
+
+   /**
+    * @Assert\NotBlank
+    * @ORM\Column(type="date")
+   */
+   protected $date_of_graduate;
+  
+   /**
+    * @Assert\NotBlank
+    * @ORM\Column(type="date")    
+   */
+   protected $birthday;
+
+   /**
+    * @Assert\NotBlank
+    * @ORM\Column(type="date")
+   */
+   protected $appointment_date;
+
+   /**
+    * @Assert\NotBlank
+    * @ORM\Column(type="date")
+   */
+   protected $join_date;
+
+   /**
+    * @Assert\NotBlank
+    * @ORM\Column(type="string", length=200)
+   */
+   protected $degree;
+
+   /**
+    * @Assert\NotBlank
+    * @ORM\Column(type="date")
+   */
+   protected $date_of_get_degree;
+
+    /**
+    * @Assert\NotBlank
+    * @ORM\Column(type="integer", length=200)
+   */
+   protected $national_id;
+
+   /**
+    * @Assert\NotBlank
+    * @ORM\Column(type="string", length=200)
+   */
+   protected $address;
+
+   /**
+    * @Assert\NotBlank
+    * @ORM\Column(type="string", length=200)
+   */
+   protected $phone;
+
+}

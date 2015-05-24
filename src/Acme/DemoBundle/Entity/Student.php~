@@ -1,0 +1,63 @@
+<?php 
+
+namespace Acme\DemoBundle\Entity;
+use Symfony\Component\Validator\Constraints as Assert;
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * @ORM\Entity
+ * @ORM\Table(name="student")
+ */
+
+class Student
+{
+
+//defination of variables 
+/************************/
+   /**
+    * @ORM\Column(type="integer", length=40)
+    * @ORM\Id
+    * @ORM\GeneratedValue(strategy="AUTO")
+   */
+    protected $id;
+
+
+   /**
+    * @Assert\NotBlank
+    * @ORM\Column(type="string", length=200)
+   */
+   protected $fullname;
+
+   /**
+    * @Assert\NotBlank
+    * @ORM\Column(type="string", length=200)
+   */
+   protected $father_job;
+
+  
+   /**
+    * @Assert\NotBlank
+    * @ORM\Column(type="date")    
+   */
+   protected $birthday;
+
+    /**
+    * @Assert\NotBlank
+    * @ORM\Column(type="string", length=200)
+   */
+   protected $national_id;
+
+   /**
+    * @Assert\NotBlank
+    * @ORM\Column(type="string", length=200)
+   */
+   protected $address;
+
+   /**
+    * @Assert\NotBlank
+    * @ORM\Column(type="string", length=200)
+   */
+   protected $phone;
+}
+
+    
